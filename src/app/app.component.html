@@ -1,0 +1,12 @@
+<form  [formGroup]="eoInfoForm">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="">Amount <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" placeholder="Amount in dolars"
+            formControlName="amount" autocomplete="off" currencyInput maxDigits="9" [ngClass]="{ 'is-invalid': eoInfo.amount.dirty  && eoInfo.amount.invalid }">
+      </div>
+    </div>
+  </div>
+</form>
+<router-outlet></router-outlet>
